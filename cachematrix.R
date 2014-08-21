@@ -1,7 +1,7 @@
-## create a function that sets initial inverse matrix value to NULL and assigns object values using <<- operator
+## create a function that sets cached values, setting initial inverse value to NULL and assigning object values in another environment using <<- operator
 
 makeCacheMatrix <- function(x = matrix()) {
-        i <- NULL               ## i = inverse matrix
+        i <- NULL               ## set initial (i, inverse matrix) to NULL
 
                 set <- function(y) {
                 x <<- y         ## using  <<- operator to assign a value to an object
@@ -9,7 +9,7 @@ makeCacheMatrix <- function(x = matrix()) {
         }
 
 
-## functions to print/return matrix, set matrix inverse &
+## cached functions to print/return matrix, set matrix inverse &
 ## return a inverse matrix that will be called by cacheSolve function below
 
 
